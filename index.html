@@ -1,0 +1,165 @@
+<html>
+<head>
+	<title>Crypto Wars</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css?1">
+	<link rel="stylesheet" href="css/styles.css?1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel=icon href=images/favi.png>
+</head>
+<body>
+	<div class="container mainContainerDiv">
+		<div class="introDiv">
+			<div class="gameTitle">Crypto Wars</div>
+			<div class="dayCounter">Day <span id="dayCountSpan">1</span> of <span id="dayTotalSpan">31</span></div>
+		</div>
+		<div class="statusDiv">
+				<img id="statusImg"></img>
+				<div class="statusTxtDiv">
+					<span id="statusTxtSpan"></span>
+					<div class="effectTxtDiv"></div>
+				</div>
+		</div>
+		<div class="row mainRowDiv">
+	    	<div class="col-sm-6">
+	    		<div class="row retroTextDiv">Cash:<span id="cashSpan">--</span></div>
+	    		<div class="row retroTextDiv">Holdings:<span id="holdingsSpan">--</span></div>
+	    		<div class="row">
+	    			<div class="col-sm-2 col2F moraleHealthBarLbl">
+	    				<span id="moraleSpan">Morale: </span>
+	    			</div>
+	    			<div class="col-sm-10 col10F">
+	    				<div class="redMoraleHealthBar">
+	    					<div class="moraleHealthBar">
+	    					</div>
+	    					<span class="moraleHealthBarTxt">100%</span>
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    	<div class="col-sm-6" id="locationsParent">
+	    		<div class="row">
+	    		</div>
+	    	</div>
+	  	</div>
+	  	<div class="row mainRowDiv">
+	  		<div class="col-sm-6 marketsDivContainer">
+	  			<div class="marketHeading">
+		  			Markets
+		  		</div>
+	  			<div id="marketsParent" class="marketsDiv">
+		  			<div class="row marketsTitleDiv">
+		  				<div class="col-sm-2 col2F">
+			  				Ticker
+			  			</div>
+			  			<div class="col-sm-5 col5F">
+		  					Name
+		  				</div>
+			  			<div class="col-sm-5 col5F">
+			  				Price ($)
+			  			</div>
+		  			</div>
+		  			<!--market data appended here from data.json-->
+		  			<div id="marketsParentData">
+		  			</div>
+		  		</div>	
+	  		</div>
+	    	<div class="col-sm-6 holdingsDivContainer">
+	    		<div class="marketHeading">
+		  			Holdings
+		  		</div>
+	  			<div class="holdingsDiv">
+		    		<div class="row marketsTitleDiv">
+		  				<div class="col-sm-3 col3F">
+			  				Ticker
+			  			</div>
+			  			<div class="col-sm-4 col4F">
+		  					Quantity
+		  				</div>
+			  			<div class="col-sm-5 col5F">
+			  				Avg Price ($)
+			  			</div>
+		  			</div>
+		  			<!--holding data added here-->
+		  			<div id="holdingParentData">
+		  			</div>
+		  		</div>
+	    	</div>
+	  	</div>	
+	  	<!--
+	  	<div class="soundChkDiv">
+			<input id="soundChkInp" type="checkbox">
+    		<label class="soundChkLb" for="soundChkInp">Audio</label>
+		</div>
+		-->	
+		<div class="dopeWarsDiv">
+			<a href='https://www.abandonwaredos.com/abandonware-game.php?abandonware=Dope+Wars&gid=2067' target='_blank'>Based on the original 1998 Dope Wars</a>
+		</div>
+	  	<div class="newGameDiv">
+				<button id="newGameB" onclick="resetGame()">New Game</button>
+		</div>
+	</div>
+	<div class="donationsDiv">
+		If you enjoyed this game, please feel free to donate a Satoshi or two: <a href='https://www.blockchain.com/btc/address/16TE9wN4fB5JiZYmi2kesP691y7svvx6qq' target='_blank'>16TE9wN4fB5JiZYmi2kesP691y7svvx6qq</a>
+	</div>
+	<script src="js/jquery-3.1.1.min.js?1"></script>
+	<script src="js/jquery.color.min.js?1"></script>
+	<script src="js/scripts.js?3"></script>
+	<script src="js/bootstrap.min.js?1"></script>
+	<div id="buyAssetModal" class="modal fade" tabindex="-1">
+	    <div class="modal-dialog modal-dialog-centered">
+	        <div class="modal-content">
+	            <div class="modal-body">
+	                <span id="buyAssetMainMessage"></span>
+					<input id="buyAssetSlider" oninput="updateBuySlider(this);" name="buyAsset" value="5" min="0" max="5" step="1" type="range" class="custom-range">
+					<span id="confirmBuyAssetMessage">
+						Buying <span id="buyingUnitsSpan"></span>  <span id="buyingAssetSpan"></span> for <span id="buyingCostSpan"></span>
+					</span>
+	            </div>
+	            <div class="modalButtons">
+	            	<button id="buyAssetButton" onclick="boughtAsset($('#buyAssetSlider').val(),$('#buyingAssetSpan').html(),false)">Buy</button>
+	            	<button id="cancelBuyButton" data-dismiss="modal">Cancel</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<div id="sellAssetModal" class="modal fade" tabindex="-1">
+	    <div class="modal-dialog modal-dialog-centered">
+	        <div class="modal-content">
+	            <div class="modal-body">
+	                <span id="sellAssetMainMessage"></span>
+					<input id="sellAssetSlider" oninput="updateSellSlider(this);" name="sellAsset" value="5" min="0" max="5" step="1" type="range" class="custom-range">
+					<span id="confirmSellAssetMessage">
+						Selling <span id="sellingUnitsSpan"></span>  <span id="sellingAssetSpan"></span> for <span id="sellingCostSpan"></span>
+					</span>
+	            </div>
+	            <div class="modalButtons">
+	            	<button id="sellAssetButton" onclick="soldAsset($('#sellAssetSlider').val(),$('#sellingAssetSpan').html())">Sell</button>
+	            	<button id="cancelSellButton" data-dismiss="modal">Cancel</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<div id="gameOverModal" class="modal fade" tabindex="-1">
+	    <div class="modal-dialog modal-dialog-centered">
+	        <div class="modal-content">
+	            <div class="modal-body">
+	            	<div id="gameOverMainMessage">
+	                </div>
+	            	<img id="gameOverImg" src='' class="gameOverImg"></img>
+					<div id="gameOverSubMessage">
+					</div>
+	            </div>
+	            <div class="modalButtons">
+	            	<button id="gameAgainPlayAgainButton" onclick="$('#gameOverModal').modal('hide'); resetGame();">Play Again</button>
+	            	<button id="cancelGameOverButton" data-dismiss="modal">Cancel</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+<!--
+don't enable audio because I don't know how the fuck to stop different browsers randomly playing them on pageload
+<audio id="audCashReg" muted="true" type="audio/mp3" src="sound/cashreg.mp3" autoplay="false" autostart="0"></audio>
+<audio id="audWasted" muted="true" type="audio/mp3" src="sound/wasted.mp3" autoplay="false" autostart="0"></audio>
+-->
+</body>
+</html>

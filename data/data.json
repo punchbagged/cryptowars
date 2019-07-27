@@ -1,0 +1,648 @@
+{
+ "initialInstructions":"Trade carefully my friends...",
+ "initialEffectTxt":"",
+ "initialImg":"images/cryptomanran.jpg",
+ "finalInstructions":"This is your last day!",
+ "finalEffectTxt":"Nearly made it...",
+ "finalImg":"images/cryptomanran.jpg",
+ "dayLimit":31,
+ "cashStart":"2000",
+ "holdingsStart":"0",
+ "moraleStart":"100",
+ "events": {
+ 	"holdings":{
+ 		"ETHGiveaway": {
+ 			"Description":"Vitalik Buterin fails to honour the free ETH giveaway you found on Twitter!",
+ 			"EffectText":"-5% morale, -5 ETH",
+ 			"MoraleBoost":-5,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":0,
+ 			"img":"images/buterin.png",
+ 			"Appearances":0,
+ 			"MaxAppearances":2,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"Inflation": {
+ 			"Description":"Government steals 25% of the value of your cash through inflation!",
+ 			"EffectText":"-10% morale, -25% cash",
+ 			"MoraleBoost":-10,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":0,
+ 			"img":"images/draghi.png",
+ 			"Appearances":0,
+ 			"MaxAppearances":2,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"BrainWallet": {
+ 			"Description":"You forgot the seed-words to your Brain Wallet!",
+ 			"EffectText":"-15% morale, lose all holdings!",
+ 			"MoraleBoost":-15,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["BTC"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":-1,
+ 			"img":"images/brain.png",
+ 			"Appearances":0,
+ 			"MaxAppearances":1,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"RecieveCharity": { 
+ 			"Description":"A Venezuelan grandmother accidentally sent 1 BTC to your wallet!",
+ 			"EffectText":"+1 BTC, +10% morale",
+ 			"MoraleBoost":10,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":["BTC"],
+ 			"QuantityGiven":1,
+ 			"img":"images/grandma.png",
+ 			"Appearances":0,
+ 			"MaxAppearances":2,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		}
+ 		,
+ 		"RecieveSpank": { 
+ 			"Description":"Your girlfriend gifts you 50,000 SPANK for Valentine's day!",
+ 			"EffectText":"+50,000 SPANK, +10% morale",
+ 			"MoraleBoost":10,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":["SPANK"],
+ 			"QuantityGiven":50000,
+ 			"img":"images/spank.png",
+ 			"Appearances":0,
+ 			"MaxAppearances":1,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"WinBTC": { 
+ 			"Description":"You're the 1st person to finish 'Mastering Bitcoin' and find BTC on the last page!",
+ 			"EffectText":"+1 BTC, +10% morale",
+ 			"MoraleBoost":10,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":["BTC"],
+ 			"QuantityGiven":1,
+ 			"img":"images/andreas.png",
+ 			"Appearances":0,
+ 			"MaxAppearances":1,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"Roubini": {
+ 			"Description":"You hack Nouriel Roubini's Binance account and find 5,000 Dogecoin",
+ 			"EffectText":"+5,000 DOGE, +10% morale",
+ 			"MoraleBoost":10,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":["DOGE"],
+ 			"QuantityGiven":5000,
+ 			"img":"images/roubini.png",
+ 			"Appearances":0,
+ 			"MaxAppearances":1,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"CharlieLee": {
+ 			"Description":"Charlie Lee bribes you with 50 LTC to stop retweeting his price predictions",
+ 			"EffectText":"+50 LTC",
+ 			"MoraleBoost":0,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":["LTC"],
+ 			"QuantityGiven":50,
+ 			"img":"images/lee.png",
+ 			"Appearances":0,
+ 			"MaxAppearances":1,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"Novogratz": {
+ 			"Description":"Mike Novogratz makes you wrestle him in a job interview.  Win 20 ETH damages!",
+ 			"EffectText":"+20 ETH, -10% morale",
+ 			"MoraleBoost":-10,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":["ETH"],
+ 			"QuantityGiven":20,
+ 			"img":"images/novogratz.jpg",
+ 			"Appearances":0,
+ 			"MaxAppearances":1,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"ICO": {
+ 			"Description":"An ICO pays you 1 BTC to pretend their blockchain cured your brain tumour",
+ 			"EffectText":"+1 BTC, -10% morale",
+ 			"MoraleBoost":-10,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":["BTC"],
+ 			"QuantityGiven":1,
+ 			"img":"images/ico.png",
+ 			"Appearances":0,
+ 			"MaxAppearances":1,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		}
+ 	},
+ 	"selling":{
+ 		"BadAddress": {
+ 			"Description":"You sent 50% of your coins to an address ending in 0 instead of o",
+ 			"EffectText":"-10% morale, -50% sale value",
+ 			"MoraleBoost":-10,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["ETH","XRP","LTC","BCH","BNB","USDT","EOS"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":-1,
+ 			"img":"images/rage.png",
+ 			"Appearances":0,
+ 			"MaxAppearances":2,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"BadTransactionFee": {
+ 			"Description":"You accidentally sent a 25% transaction fee",
+ 			"EffectText":"-5% morale, -25% sale value",
+ 			"MoraleBoost":-5,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["ETH","XRP","LTC","BCH","BNB","USDT","EOS","BSV","TRX","DOGE","SPANK"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":-1,
+ 			"img":"images/rage2.png",
+ 			"Appearances":0,
+ 			"MaxAppearances":2,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"BogdanoffPump": {
+ 			"Description":"Bogdanoff orders a BTC pump after you sold the bottom",
+ 			"EffectText":"-5% morale",
+ 			"MoraleBoost":-5,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["BTC"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":0,
+ 			"img":"images/bogdanoff.jpg",
+ 			"Appearances":0,
+ 			"MaxAppearances":3,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"Mempool": {
+ 			"Description":"Transaction stuck in mempool due to network congestion - try again!",
+ 			"EffectText":"-5% morale",
+ 			"MoraleBoost":-5,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["BTC"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":0,
+ 			"img":"images/mempool.jpg",
+ 			"Appearances":0,
+ 			"MaxAppearances":1,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		}
+ 	},
+ 	"market":{
+ 		"SatoshiReturns": {
+ 			"Description":"Satoshi finds his private key and moves 1m BTC to Coinbase",
+ 			"EffectText":"Price of BTC plummets!",
+ 			"MoraleBoost":0,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":0,
+ 			"img":"images/wright.png",
+ 			"Appearances":0,
+ 			"MaxAppearances":1,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"USDPrinting": {
+ 			"Description":"Jerome Powell announces 18 further rounds of Quantitative Easing",
+ 			"EffectText":"Price of BTC soars!",
+ 			"MoraleBoost":0,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":0,
+ 			"img":"images/powell.png",
+ 			"Appearances":0,
+ 			"MaxAppearances":1,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"Asteroid": {
+ 			"Description":"Jeff Bezos mines 100,000 tonnes of gold from asteroid",
+ 			"EffectText":"Price of BTC soars!",
+ 			"MoraleBoost":0,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":0,
+ 			"img":"images/bezos.jpg",
+ 			"Appearances":0,
+ 			"MaxAppearances":1,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"Exitscam": {
+ 			"Description":"Coinbase have Exit-Scammed!",
+ 			"EffectText":"Prices crash, -50% holdings!",
+ 			"MoraleBoost":0,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":0,
+ 			"img":"images/coinbase.jpg",
+ 			"Appearances":0,
+ 			"MaxAppearances":1,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"Wifescam": {
+ 			"Description":"Your wife has Exit-Scammed your marriage and taken half your crypto!",
+ 			"EffectText":"-50% holdings, -10% morale",
+ 			"MoraleBoost":-10,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":0,
+ 			"img":"images/wife.png",
+ 			"Appearances":0,
+ 			"MaxAppearances":1,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"CNBC": {
+ 			"Description":"You take trade advice from a CNBC technical analyst!",
+ 			"EffectText":"-25% holdings, -10% morale",
+ 			"MoraleBoost":-10,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":0,
+ 			"img":"images/cnbc.jpg",
+ 			"Appearances":0,
+ 			"MaxAppearances":2,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"ChineseNewYear": {
+ 			"Description":"It’s finally Chinese New Year!",
+ 			"EffectText":"Markets trade sideways, -5% morale",
+ 			"MoraleBoost":-5,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":0,
+ 			"img":"images/chinese.jpg",
+ 			"Appearances":0,
+ 			"MaxAppearances":1,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"Consensus": {
+ 			"Description":"It’s finally Consensus Conference week!",
+ 			"EffectText":"Markets trade sideways, -5% morale",
+ 			"MoraleBoost":-5,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":0,
+ 			"img":"images/consensus.png",
+ 			"Appearances":0,
+ 			"MaxAppearances":1,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"ETHPrinting": {
+ 			"Description":"Ethereum creates 10 million new ETH",
+ 			"EffectText":"Price of ETH plummets!",
+ 			"MoraleBoost":0,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":0,
+ 			"img":"images/eth.png",
+ 			"Appearances":0,
+ 			"MaxAppearances":1,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"Tether": {
+ 			"Description":"Tether dollar-peg breaks as US government seizes bank accounts",
+ 			"EffectText":"Price of USDT plummets!",
+ 			"MoraleBoost":0,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":0,
+ 			"img":"images/tether.png",
+ 			"Appearances":0,
+ 			"MaxAppearances":1,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"XRPPrinting": {
+ 			"Description":"Ripple creates 10 billion new XRP",
+ 			"EffectText":"Price of XRP plummets!",
+ 			"MoraleBoost":0,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":0,
+ 			"img":"images/xrp.png",
+ 			"Appearances":0,
+ 			"MaxAppearances":2,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"JustinSun": {
+ 			"Description":"Justin Sun hits puberty and decides to sell his holdings",
+ 			"EffectText":"Price of TRX plummets!",
+ 			"MoraleBoost":0,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":0,
+ 			"img":"images/sun.jpg",
+ 			"Appearances":0,
+ 			"MaxAppearances":1,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"Winklevoss": {
+ 			"Description":"Winklevoss twins get trapped inside their own patented Cold Storage vault",
+ 			"EffectText":"+10% morale, Price of BTC surges!",
+ 			"MoraleBoost":10,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":0,
+ 			"img":"images/winklevoss.png",
+ 			"Appearances":0,
+ 			"MaxAppearances":1,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"CZBinance": {
+ 			"Description":"CZ fails to roll back Bitcoin blockchain",
+ 			"EffectText":"+10% morale, funds are safu",
+ 			"MoraleBoost":10,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":0,
+ 			"img":"images/cz.png",
+ 			"Appearances":0,
+ 			"MaxAppearances":2,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		}
+ 	},
+ 	"morale":{
+ 		"PeterSchiff": {
+ 			"Description":"Peter Schiff publicly declares that your face has no intrinsic value",
+ 			"EffectText":"-10% morale",
+ 			"MoraleBoost":-10,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":-1,
+ 			"img":"images/schiff.jpg",
+ 			"Appearances":0,
+ 			"MaxAppearances":2,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"Buffett": {
+ 			"Description":"Warren Buffet brands Facebook’s Libra ‘Rat Poison Cubed’",
+ 			"EffectText":"+10% morale",
+ 			"MoraleBoost":10,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":-1,
+ 			"img":"images/buffett.jpg",
+ 			"Appearances":0,
+ 			"MaxAppearances":1,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"Economics": {
+ 			"Description":"You read 'The Bitcoin Standard' and realise your Economics degree is worthless",
+ 			"EffectText":"-10% morale",
+ 			"MoraleBoost":-10,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":-1,
+ 			"img":"images/economics.png",
+ 			"Appearances":0,
+ 			"MaxAppearances":1,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"Delta": {
+ 			"Description":"You develop Repetitive Strain Injury from overuse of Delta app",
+ 			"EffectText":"-10% morale",
+ 			"MoraleBoost":-10,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":0,
+ 			"img":"images/delta.jpg",
+ 			"Appearances":0,
+ 			"MaxAppearances":2,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"Balina": {
+ 			"Description":"You meet Ian Balina at a conference",
+ 			"EffectText":"-10% morale",
+ 			"MoraleBoost":-10,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":0,
+ 			"img":"images/balina.jpg",
+ 			"Appearances":0,
+ 			"MaxAppearances":2,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"Mayer": {
+ 			"Description":"Trace Mayer tweets about buying Bitcoin in 2011 for $1",
+ 			"EffectText":"-10% morale",
+ 			"MoraleBoost":-10,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":0,
+ 			"img":"images/mayer.jpg",
+ 			"Appearances":0,
+ 			"MaxAppearances":2,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"HumanFeces": {
+ 			"Description":"You skidded 3-feet on human shit outside a VC's office in San Francisco",
+ 			"EffectText":"-10% morale",
+ 			"MoraleBoost":-10,
+ 			"EffectLocations":["San Fran"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":-1,
+ 			"img":"images/shit.png",
+ 			"Appearances":0,
+ 			"MaxAppearances":2,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"RogerVer": {
+ 			"Description":"Roger Ver hard-forks you in the eye at a dinner party",
+ 			"EffectText":"-10% morale",
+ 			"MoraleBoost":-10,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":0,
+ 			"img":"images/ver.png",
+ 			"Appearances":0,
+ 			"MaxAppearances":2,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		},
+ 		"McAfee": {
+ 			"Description":"John McAfee makes good on his BTC-prediction forfeit",
+ 			"EffectText":"-10% morale",
+ 			"MoraleBoost":-10,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":0,
+ 			"img":"images/mcafee.png",
+ 			"Appearances":0,
+ 			"MaxAppearances":1,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		}
+ 		,
+ 		"Mother": {
+ 			"Description":"Your mother accidentally sends your inheritance to a smart contract address",
+ 			"EffectText":"-15% morale",
+ 			"MoraleBoost":-15,
+ 			"EffectLocations":["All"],
+ 			"EffectAssets":["All"],
+ 			"DonateAssets":[],
+ 			"QuantityGiven":0,
+ 			"img":"images/mother.png",
+ 			"Appearances":0,
+ 			"MaxAppearances":1,
+ 			"LastAppearance":-3,
+ 			"MinFrequencyGap":3
+ 		}
+ 	}
+ },
+ "cryptoMarkets": {
+ 	"BTC": {
+ 		"Name": "Bitcoin", 
+ 		"Price": 10135.27,
+ 		"PosDeviation": 2.1,
+ 		"NegDeviation": 0.6
+ 	},"ETH": {
+ 		"Name": "Ethereum", 
+ 		"Price": 214.14,
+ 		"PosDeviation": 1.4,
+ 		"NegDeviation": 0.5
+ 	},"XRP": {
+ 		"Name": "XRP", 
+ 		"Price": 0.316034,
+ 		"PosDeviation": 1.2,
+ 		"NegDeviation": 0.6
+ 	},"LTC": {
+ 		"Name": "Litecoin", 
+ 		"Price": 91.99,
+ 		"PosDeviation": 1.3,
+ 		"NegDeviation": 0.4
+ 	},"BCH": {
+ 		"Name": "Bitcoin Cash", 
+ 		"Price": 306.49,
+ 		"PosDeviation": 1.1,
+ 		"NegDeviation": 0.2
+ 	},"BNB": {
+ 		"Name": "Binance Coin", 
+ 		"Price": 30.07,
+ 		"PosDeviation": 1.9,
+ 		"NegDeviation": 0.6
+ 	},"USDT": {
+ 		"Name": "Tether", 
+ 		"Price": 1.00,
+ 		"PosDeviation": 1.001,
+ 		"NegDeviation": 0.999
+ 	},"EOS": {
+ 		"Name": "EOS", 
+ 		"Price": 4.04,
+ 		"PosDeviation": 1.2,
+ 		"NegDeviation": 0.3
+ 	},"BSV": {
+ 		"Name": "Bitcoin SV", 
+ 		"Price": 172.75,
+ 		"PosDeviation": 1.05,
+ 		"NegDeviation": 0.1
+ 	},"TRX": {
+ 		"Name": "Tron", 
+ 		"Price": 0.025208,
+ 		"PosDeviation": 1.4,
+ 		"NegDeviation": 0.3
+ 	},"DOGE": {
+ 		"Name": "Dogecoin", 
+ 		"Price": 0.002973,
+ 		"PosDeviation": 2,
+ 		"NegDeviation": 0.5
+ 	},"SPANK": {
+ 		"Name": "SpankChain", 
+ 		"Price": 0.007080,
+ 		"PosDeviation": 2,
+ 		"NegDeviation": 0.5
+ 	}
+ },
+ "locations": {
+ 	"Singapore": {
+ 		"enabled":false
+ 	},
+ 	"Seoul": {
+ 		"enabled":true
+ 	},
+ 	"Tokyo": {
+ 		"enabled":true
+ 	},
+ 	"London": {
+ 		"enabled":true
+ 	},
+ 	"Berlin": {
+ 		"enabled":true
+ 	},
+ 	"Barcelona": {
+ 		"enabled":true
+ 	},
+ 	"New York": {
+ 		"enabled":true
+ 	},
+ 	"San Fran": {
+ 		"enabled":true
+ 	},
+ 	"Las Vegas": {
+ 		"enabled":true
+ 	}
+ }
+}

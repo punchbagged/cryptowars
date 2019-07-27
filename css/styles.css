@@ -1,0 +1,389 @@
+@media screen and (min-width: 700px) {
+	.introDiv{
+		margin-top: 20px;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	.gameTitle{
+	    font-weight: bold;
+	    font-size: 20px;
+	    color: #0056ff;
+	}
+	.dayCounter{
+		font-size: 14px;
+	    color: grey;
+	    margin-bottom:8px;
+	}
+  	.statusDiv{
+		font-size: 14px;
+		text-align: left;
+	    margin-bottom: 8px;
+	    color: #ccac04;
+	    background-color: #fdfdfd;
+	    border: #d0d0d0 4px solid;
+	    border-radius: 50px;
+	    padding: 5px;
+	}
+  	.statusTxtDiv{
+		display:inline-block !important;
+		margin-left: 15px;
+		vertical-align: middle;
+	}
+	.effectTxtDiv{
+		color: #8a8a8a;
+	    font-size: 12px;
+	}
+  	#statusImg {
+		border: #2da3f7 solid 2px;
+	    height: 70px;
+	    width: 70px;
+	    border-radius: 50%;
+	}
+  	.marketsTitleDiv{
+	    font-size: 14px;
+	}
+	.marketsDiv, .holdingsDiv{
+	    font-size: 13px !important;
+	    height: 280px !important;
+	}	
+	.locationButton{
+		font-size:13px;
+		width: 100px;
+		margin-top: 5px;
+	    margin-right: 3px;
+	}
+	.mainRowDiv{
+		margin-left: -10px;
+	    margin-right: -10px;
+	    padding-bottom: 5px;
+	}
+	.retroTextDiv {
+		color: #2fec2f;
+	    font-weight: bold;
+	    font-size: 16px;
+	    background-color: black;
+	    margin-top:5px;
+	    margin-bottom:5px;
+	    padding-left: 3px;
+	    margin-left:0px;
+	    margin-right:0px;
+	}
+	.moraleHealthBarLbl{
+		color: grey;
+		margin-top: 2px;
+		font-size: 14px;
+	    font-weight: normal;
+	}
+	.redMoraleHealthBar{
+		height: 25px;
+	}
+	.moraleHealthBar{
+		height: 25px;
+	}
+	.moraleHealthBarTxt{
+		font-size:16px;
+		position: absolute;
+	    top: 0px;
+	    transform: translateX(-50%);
+	}
+	.dopeWarsDiv{
+		position: absolute;
+		margin-top: 6px;
+		font-size: 12px;
+		cursor:pointer !important;
+	}
+	.marketHeading{
+		font-size: 14px;
+	    font-weight: bold;
+	    color: #afafaf;
+	    text-align: center;
+	    margin-bottom: 5px;
+    	margin-top: 5px;
+	}
+}
+@media screen and (max-width: 699px) {
+	.introDiv{
+		margin-top: 10px;
+		margin-bottom: 0px;
+		text-align: center;
+	}
+	.gameTitle{
+	    font-weight: bold;
+	    font-size: 16px;
+	    color: #0056ff;
+	}
+	.dayCounter{
+		font-size: 12px;
+	    color: grey;
+	    margin-bottom:4px;
+	}
+  	.statusDiv{
+		font-size: 12px;
+		text-align: center;
+	    margin-bottom: 4px;
+	    color: #ccac04;
+	    background-color: #fdfdfd;
+	    border: #d0d0d0 3px solid;
+	    border-radius: 50px;
+	    padding: 2px;
+	}
+  	.statusTxtDiv{
+		display:block !important;
+		vertical-align: middle;
+	}
+	.effectTxtDiv{
+		color: #8a8a8a;
+	    font-size: 11px;
+	}
+	#statusImg {
+		border: #2da3f7 solid 2px;
+	    height: 60px;
+	    width: 60px;
+	    border-radius: 50%;
+	}
+  	.marketsTitleDiv{
+	    font-size: 12px;
+	}  	
+	.marketsDiv, .holdingsDiv{
+		font-size: 12px !important;
+		height: 150px !important;
+	}		
+	.marketsDivContainer{
+		padding-bottom:0px;
+	}
+	.locationButton{
+		font-size:11px;
+		width: 80px;
+		margin-top: 5px;
+	    margin-right: 3px;
+	}
+	.mainRowDiv{
+		margin-left: -10px;
+	    margin-right: -10px;
+	}	
+	.retroTextDiv {
+		color: #2fec2f;
+	    font-weight: bold;
+	    font-size: 14px;
+	    background-color: black;
+	    margin-top:3px;
+	    margin-bottom:3px;
+	    padding-left: 3px;
+	    margin-left:0px;
+	    margin-right:0px;
+	}
+	.moraleHealthBarLbl{
+		color: grey;
+		margin-top: 2px;
+		font-size: 12px;
+	    font-weight: normal;
+	}
+	.redMoraleHealthBar{
+		height: 20px;
+	}
+	.moraleHealthBar{
+		height: 20px;
+	}
+	.moraleHealthBarTxt{
+		font-size:14px;
+		position: absolute;
+	    top: 0px;
+	    transform: translateX(-50%);
+	}
+	.dopeWarsDiv{
+		position: absolute;
+		margin-top: 10px;
+		font-size: 11px;
+		cursor:pointer !important;
+	}
+	#newGameB{
+		font-size: 14px;
+    	margin-top: 5px;
+	}
+	.marketHeading{
+		font-size: 13px;
+		margin-top: 8px;
+	    font-weight: bold;
+	    color: #afafaf;
+	    text-align: center;
+	}
+}
+.col2F{
+	-ms-flex: 0 0 16.666667% !important;
+    flex: 0 0 16.666667% !important;
+    max-width: 16.666667% !important;
+}
+.col3F{
+	-ms-flex: 0 0 25% !important;
+    flex: 0 0 25% !important;
+    max-width: 25% !important;
+}
+.col4F{
+	-ms-flex: 0 0 33.333333% !important;
+    flex: 0 0 33.333333% !important;
+    max-width: 33.333333% !important;
+}
+.col5F{
+	-ms-flex: 0 0 41.666667% !important;
+    flex: 0 0 41.666667% !important;
+    max-width: 41.666667% !important;
+}
+.col10F{
+	-ms-flex: 0 0 83.33333% !important;
+    flex: 0 0 83.333333% !important;
+    max-width: 83.333333% !important;
+}
+
+#gameOverMainMessage{
+	font-size: 18px;
+    font-weight: bold;
+    color: #266fe4;
+}
+#gameOverSubMessage{
+	color:grey;
+}
+.gameOverImg{
+	border: #f95e5e solid 2px;
+	height: 100px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+    width: 100px;
+    border-radius: 50%;
+}
+#cashSpan, #holdingsSpan {
+	position: absolute;
+    right: 17px;
+}
+#moraleSpan {
+	margin-left:2px;
+}
+.buySpan, .sellSpan{
+	position: absolute;
+    right: 10px;
+    font-weight: bold;
+    color: #38b509;
+    display:none;
+    background-color: #ffe973;
+    padding: 4px;
+    border: #ffe973 2px solid;
+    border-radius: 30px;
+    top: -7px;
+}
+.marketRow:hover .buySpan { display: inline-block; }
+.marketRow:hover .sellSpan { display: inline-block; }
+
+.mainContainerDiv{
+	max-width: 700px;
+	margin: auto;
+	margin-top: 20px;
+	background: #eaeadb;
+    border: 3px solid #4987f9;
+    border-radius: 5px;
+    cursor:default;
+}
+.moraleHealthBar{
+	width: 100%;
+    background-color: #1765f3;
+    margin-bottom:5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.redMoraleHealthBar{
+	background-color:#f72929;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+.newGameDiv{
+	text-align: right;
+    padding-bottom: 5px;
+    margin-left: -7px;
+    margin-right: -7px;
+}
+.marketsDivContainer{
+	padding-right: 3px;
+	padding-left: 1px;
+}
+.marketsDiv, .holdingsDiv{
+	background-color: white;
+    padding-left: 3px;
+    height: 280px;
+    overflow: scroll;
+}
+.marketsTitleDiv{
+    font-weight: bold;
+    margin-left:0px;
+	margin-right:0px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+.marketRow{
+	margin-left:0px;
+	margin-right:0px;
+}
+.marketRow:hover{
+	background-color: #ffe973;
+	cursor:pointer;
+}
+.holdingsDivContainer{
+	padding-right: 3px;
+	padding-left: 1px;
+}
+.holdingsDiv{
+	background-color: white;
+    padding-left: 3px;
+    font-size: 14px;
+    height: 280px;
+    overflow: scroll;
+}
+#buyAssetModal, #sellAssetModal, #gameOverModal {
+	font-size: 14px;
+    text-align: center;
+}
+.modal-content{
+	border: #0089ff 3px solid;
+}
+.modalButtons{
+	margin-bottom: 15px;
+}
+#buyAssetSlider{
+	margin-top: 10px;
+}
+#buyAssetMainMessage{
+	font-size: 12px;
+    color: grey;
+}
+#buyingUnitsSpan, #buyingCostSpan, #sellingUnitsSpan, #sellingCostSpan{
+	font-weight:bold;
+}
+.donationsDiv{
+	font-size: 11px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+    text-align: center;
+    color: grey;
+}
+.soundChkDiv{
+	position: absolute;
+	margin-top: 6px;
+	font-size: 12px;
+	cursor:pointer !important;
+}
+.soundChkLb, #soundChkInp{
+	cursor:pointer !important;
+}
+.greenArrow{
+	display:none !important;
+	color: #30ec2f;
+    position: absolute;
+    left: -2px;
+    margin-top: 2px;
+}
+.redArrow{
+	display:none !important;
+	color: #f82929;
+    position: absolute;
+    left: -2px;
+    margin-top: 2px;
+}
