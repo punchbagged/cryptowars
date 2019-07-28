@@ -220,6 +220,7 @@ function triggerEvent(theEvent){
 			break;
 		case "Wifescam":
 			updateMarketData();
+			updateMorale(cMorale + theEvent.MoraleBoost);
 			loseHoldings(2);//lose 50% holdings
 			break;
 		case "ETHGiveaway":
