@@ -1,14 +1,3 @@
-var folder = "images/";
-$.ajax({
-    url : folder,
-    success: function (data) {
-        $(data).find("a").attr("href", function (i, val) {
-            if( val.match(/\.(jpe?g|png|gif)$/) ) { 
-                $("#loadImgs").append( "<img style='display:none;height:1px;width:1px' src='"+ folder + val +"'>" );
-            } 
-        });
-    }
-});
 var statusTxtTimer;
 $("#statusTxtSpan").on("change",function(){
 	$(".statusDiv").animate({borderColor: "rgb(255, 215, 0)"},500);
@@ -528,8 +517,20 @@ function loadInitialData(){
 		    var newCrypto = '<div class="row marketRow" id="'+key+'MarketRow" onclick="clickedAsset(this.id)"><div class="col-sm-2 col2F">'+key+'</div><div class="col-sm-5 col5F">'+json.cryptoMarkets[key].Name+'</div><div class="col-sm-5 col5F" id="'+key+'Price"><i class="fa fa-arrow-up greenArrow" id="'+key+'greenArrow"></i><i class="fa fa-arrow-down redArrow" id="'+key+'redArrow"></i><span id="'+key+'PriceSpan">'+formatDollar(json.cryptoMarkets[key].Price,"")+'</span><span class="buySpan">Buy</span></div>';
 		    $("#marketsParentData").append(newCrypto);
 		});
+		if (firstLoad){
+			//load all images now so we don't have to wait when clicking locations
+			for (var key in gEvents) {
+			  for (var key2 in gEvents[key]) {
+			    for (var key3 in gEvents[key][key2]){
+					if (key3=="img") $("#loadImgs").append( "<img style='height:1px;width:1px' src='"+ gEvents[key][key2][key3] +"'>" );
+			  	}
+			  }
+			}
+		}
+		firstLoad = false;
 	});
 }
+var firstLoad = true;
 $(function() {
 	loadInitialData();
 });
